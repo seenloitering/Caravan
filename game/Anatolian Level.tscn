@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Track.gd" type="Script" id=1]
+[ext_resource path="res://Ground.tscn" type="PackedScene" id=2]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 3.70328, -1.07172, -315.784, 26.6571, 315.784, -26.6571, 1997.81, 1.51297, -153.791, 24.6065, 153.791, -24.6065, 2985.16, -154.862, -98.4261, -2.05054, 98.4261, 2.05054, 4967.64, -331.915, -301.43, -102.527, 301.43, 102.527, 5891.74, 61.8318, -139.437, -6.15163, 139.437, 6.15163, 7850.01, 447.334, -98.4261, -12.3033, 98.4261, 12.3033, 8847.67, 475.099, 0, 0, 0, 0, 9839.21, 580.292, -145.589, -47.1625, 145.589, 47.1625, 10835.6, 707.753, -250.166, -98.4261, 250.166, 98.4261, 11655.8, 1257.3, 0, 0, 0, 0, 13653.4, 1246.51 )
+}
+
+[node name="Anatolian Level" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Ground_1" parent="." instance=ExtResource( 2 )]
+
+[node name="Ground_2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 999.738, 0.131012 )
+
+[node name="Ground_3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1997.56, 1.18555 )
+rotation = -0.158439
+
+[node name="Ground_4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2983.9, -156.717 )
+rotation = -0.0876911
+
+[node name="Ground_5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3979.44, -244.41 )
+rotation = -0.0876911
+
+[node name="Ground_6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4969.54, -331.596 )
+rotation = 0.400508
+
+[node name="Ground_7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5889.63, 58.5256 )
+rotation = 0.193066
+
+[node name="Ground_8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6870.8, 250.216 )
+rotation = 0.193066
+
+[node name="Ground_9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 7851.69, 441.906 )
+rotation = 0.0346267
+
+[node name="Ground_10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8846.89, 475.692 )
+rotation = 0.105375
+
+[node name="Ground_11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 9840.21, 580.797 )
+rotation = 0.105375
+
+[node name="Ground_12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 10836.2, 685.301 )
+rotation = 0.593574
+
+[node name="Ground_13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 11662.7, 1244.62 )
+
+[node name="Ground_14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 12662, 1244.97 )
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource( 1 )

@@ -1,0 +1,170 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "SuperStructure",
+"class": "Beast",
+"language": "GDScript",
+"path": "res://Figure/SuperStructure/Beast/Beast.gd"
+}, {
+"base": "StaticBody2D",
+"class": "BodyPart",
+"language": "GDScript",
+"path": "res://Figure/SuperStructure/Beast/BodyPart.gd"
+}, {
+"base": "SuperStructure",
+"class": "Building",
+"language": "GDScript",
+"path": "res://Figure/SuperStructure/Building/Building.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Critter",
+"language": "GDScript",
+"path": "res://Figure/Critter/Critter.gd"
+}, {
+"base": "Node",
+"class": "Fall",
+"language": "GDScript",
+"path": "res://Figure/Critter/States/Fall.gd"
+}, {
+"base": "CollisionShape2D",
+"class": "Geometry2D",
+"language": "GDScript",
+"path": "res://Scripts/Geometry2D.gd"
+}, {
+"base": "SuperStructure",
+"class": "Ground",
+"language": "GDScript",
+"path": "res://Figure/SuperStructure/Ground/Ground.gd"
+}, {
+"base": "Node",
+"class": "Idle",
+"language": "GDScript",
+"path": "res://Figure/Critter/States/Idle.gd"
+}, {
+"base": "Node",
+"class": "Jump",
+"language": "GDScript",
+"path": "res://Figure/Critter/States/Jump.gd"
+}, {
+"base": "Reference",
+"class": "LocalKinematicsUtils",
+"language": "GDScript",
+"path": "res://Scripts/LocalKinematicsUtils.gd"
+}, {
+"base": "Reference",
+"class": "MathUtils",
+"language": "GDScript",
+"path": "res://Scripts/MathUtils.gd"
+}, {
+"base": "Node",
+"class": "Run",
+"language": "GDScript",
+"path": "res://Figure/Critter/States/Run.gd"
+}, {
+"base": "StaticBody2D",
+"class": "SuperStructure",
+"language": "GDScript",
+"path": "res://Figure/SuperStructure/SuperStructure.gd"
+}, {
+"base": "Object",
+"class": "Target",
+"language": "GDScript",
+"path": "res://Scripts/Target.gd"
+}, {
+"base": "Node2D",
+"class": "Test",
+"language": "GDScript",
+"path": "res://Test.gd"
+}, {
+"base": "Node2D",
+"class": "Track",
+"language": "GDScript",
+"path": "res://Scripts/Track.gd"
+} ]
+_global_script_class_icons={
+"Beast": "",
+"BodyPart": "",
+"Building": "",
+"Critter": "",
+"Fall": "",
+"Geometry2D": "",
+"Ground": "",
+"Idle": "",
+"Jump": "",
+"LocalKinematicsUtils": "",
+"MathUtils": "",
+"Run": "",
+"SuperStructure": "",
+"Target": "",
+"Test": "",
+"Track": ""
+}
+
+[application]
+
+config/name="Caravan.0.2"
+run/main_scene="res://World.tscn"
+
+[autoload]
+
+QueryDesk="*res://QueryDesk.tscn"
+WalledGarden="*res://WalledGarden.tscn"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+
+[input]
+
+ui_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":14,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+ui_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":15,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+ui_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":12,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+ui_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":13,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+ui_right_mouse_button={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+ui_left_mouse_button={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+
+[physics]
+
+2d/default_gravity=2000
+
+[rendering]
+
+quality/filters/use_nearest_mipmap_filter=true
+quality/filters/msaa=2
