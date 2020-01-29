@@ -1,2 +1,2 @@
 # Caravan
-An RTS Racer.
+An RTS Base Racer.
